@@ -45,4 +45,20 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
+
+    // DataStore (sirve para almacenar un volumen chico de datos) , en caso de mas cantidad de datos se recomienda Room !
+    implementation ("androidx.datastore:datastore-preferences:1.0.0")
+
+    // viewmodel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+
 }
