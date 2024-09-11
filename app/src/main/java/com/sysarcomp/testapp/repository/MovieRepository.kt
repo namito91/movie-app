@@ -1,9 +1,7 @@
 package com.sysarcomp.testapp.repository
 
-import com.sysarcomp.testapp.model.Movie
 import com.sysarcomp.testapp.model.MovieResponse
 import com.sysarcomp.testapp.network.ApiService
-import com.sysarcomp.testapp.network.RetrofitClient
 
 class MovieRepository(private val apiService: ApiService) {
 

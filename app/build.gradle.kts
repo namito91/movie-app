@@ -51,16 +51,19 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-// ViewModel y LiveData
+    // ViewModel y LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
 
-// RecyclerView
+    // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.2.1")
 
-// Para la navegación entre pantallas
+    // Para la navegación entre pantallas
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.1")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.1")
+
+    // picasso , para conversion de url en imagen
+    implementation ("com.squareup.picasso:picasso:2.71828")
 
 
 }
