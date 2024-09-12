@@ -31,20 +31,25 @@ class MainActivity : AppCompatActivity() {
         val movieRv = findViewById<RecyclerView>(R.id.rvMovie)
         movieRv.layoutManager = LinearLayoutManager(this)
 
-        // Inicializa el adaptador solo una vez
-        movieAdapter = MovieAdapter(emptyList()) { item ->
-            //val intent = Intent(this, DetailActivity::class.java)
-            //intent.putExtra("item", item)
-            //startActivity(intent)
 
-            Log.i("patrox", "hiciste click !!")
+        // Inicializa el adaptador solo una vez
+        movieAdapter = MovieAdapter(emptyList()) { movie ->
+
+            val intent = Intent(this, MovieDetail::class.java)
+
+            intent.putExtra("id", movie.id.toString())
+
+            Log.i("patrox id" , movie.id.toString())
+
+            startActivity(intent)
         }
 
         movieRv.adapter = movieAdapter
 
+
         // Observa los cambios en la lista de ítems y actualiza el adaptador
-        movieViewModel.movies.observe(this, { items ->
-            movieAdapter.updateItems(items)  // Asume que tienes un método updateItems en el adapter
+        movieViewModel.movies.observe(this, { movies ->
+            movieAdapter.updateItems(movies)
         })
 
         movieViewModel.fetchTrendingMovies()
