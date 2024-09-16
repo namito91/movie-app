@@ -2,6 +2,8 @@ package com.sysarcomp.testapp.ui
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -13,12 +15,7 @@ class MovieDetail : AppCompatActivity() {
 
     private lateinit var movieViewModel: MovieViewModel
 
-    private var movieDetailResponse: MovieDetailResponse? = null
-
     private lateinit var title: TextView
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,11 +25,20 @@ class MovieDetail : AppCompatActivity() {
         setContentView(R.layout.activity_movie_detail)
 
         title = findViewById(R.id.movieDetailTitle)
-        // tomo el id del heroe seleccionado
+
+
+        // Configura el botón para volver a la pantalla anterior
+        val backButton: ImageButton = findViewById(R.id.btnBack)
+        backButton.setOnClickListener {
+            onBackPressed() // Volver a la pantalla anterior
+        }
+
+
+        // tomo el id del movie seleccionado
         // aseguro que siempre retorne un string , vacio o no
         val id = intent.getStringExtra("id").orEmpty()
 
-        Log.i("patrox2" , id)
+        // Log.i("patrox2" , id)
 
         movieViewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
 
@@ -52,7 +58,7 @@ class MovieDetail : AppCompatActivity() {
 
         title.text = movieDetailResponse.original_title
 
-        Log.i("title" , movieDetailResponse.original_title)
+        // Log.i("title" , movieDetailResponse.original_title)
     }
 
 
