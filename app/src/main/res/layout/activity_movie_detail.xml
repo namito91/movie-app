@@ -23,6 +23,14 @@
             android:scaleType="centerInside"
             android:src="@drawable/ic_arrow_back" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/details"
+            android:textSize="30sp"
+            />
+
+
         <ImageView
             android:id="@+id/ivMovieDetail"
             android:layout_width="match_parent"
@@ -37,8 +45,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:textSize="20dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <!-- (image, title, description, genres, budget, popularity and release day -->
         <TextView

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TestApp</string>
     <string name="poster">movie poster</string>
+    <string name="details">Movie details</string>
+    <string name="movies">Movies</string>
 
 </resources>
